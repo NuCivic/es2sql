@@ -43,14 +43,14 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: './scripts/index',
+  entry: './src/index',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/static/'
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.jsx']
   },
   devtool: 'source-map',
   plugins: [

@@ -48,7 +48,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:5000',
     'webpack/hot/dev-server',
-    './scripts/index'
+    './src/index'
   ],
   output: {
     path: __dirname,
@@ -56,7 +56,7 @@ module.exports = {
     publicPath: '/static/'
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.jsx']
   },
   devtool: 'eval-source-map',
   plugins: [
@@ -68,7 +68,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'scripts')
+        include: path.join(__dirname, 'src')
       }
     ]
   }
