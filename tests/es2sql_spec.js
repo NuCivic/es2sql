@@ -1,4 +1,4 @@
-import * as Es2Sql from '../src/modules/es2sql.js';
+import * as Es2Sql from '../src/es2sql.js';
 
 let Lib = Es2Sql.privates;
 
