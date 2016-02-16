@@ -1,6 +1,6 @@
 {
   "name": "es2sql",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --config webpack.config.production.js",
