@@ -1,2 +1,2 @@
-import './modules/es2sql.js';
+import './es2sql.js';
 
