@@ -1,5 +1,4 @@
 'use strict';
-console.log('>>>', __dirname);
 import * as _ from 'lodash';
 
 /**
@@ -105,7 +104,6 @@ let privates = {
     if (!opts) return;
     let and = false;
     let sql = ['ORDER BY'];
-    console.log(opts);
     // array of sort objects
     if (_.isArray(opts)) {
       _.each(opts, (sortObj) => {
@@ -119,9 +117,7 @@ let privates = {
       });
     // field syntax
     } else if (opts.field) {
-      console.log('SSS-1-0', privates.__sortLabeled(opts));
       sql = sql.concat(privates.__sortLabeled(opts));
-      console.log('SSS-1',sql);
     // simple syntax
     } else {
       sql = sql.concat(privates.__sortSimple(opts));
@@ -134,12 +130,10 @@ let privates = {
   // {field : 'foo', order: 'DESC' format}
   // {field : 'foo'} // defaults to DESC
   __sortLabeled: (opts) => {
-      console.log('__sl', opts);
       let sql = [];
       let dir = opts.order || 'DESC';
       sql.push(opts.field);
       sql.push(dir);
-      console.log(sql);
       return sql;
   },
 
@@ -147,18 +141,15 @@ let privates = {
   // format:
   // {foo : 'desc'};
   __sortSimple: (opts) => {
-    console.log('__ss', opts);
     let sql = [];
     let field = _.keys(opts)[0];
     sql.push(field);
     sql.push(opts[field]);
-    console.log(sql);
     return sql;
   },
 
   // @@TODO Implement GROUP BY
   _group: (opts) => {
-    console.log('_g', opts); 
   },
 
   _composeQuery: (opts) => {
@@ -175,7 +166,6 @@ let privates = {
 
 module.exports = {
   translate : (opts) => {
-    console.log('es2sql 1', opts, privates);
     let q = opts;
     let fields = privates._fields(q.fields);
     let tableName = q.table;

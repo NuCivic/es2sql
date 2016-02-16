@@ -98,7 +98,6 @@ describe('Test _sort', () => {
 describe('Test _filters method - single term filter', () => {
   let data = {term : {foo : 'bar'}};
   let val = Lib._filters(data);
-  console.log('t _f', val);
   it('Should say WHERE foo = bar', () => {
     expect(val).toEqual('WHERE foo = bar');
   });
