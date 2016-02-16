@@ -164,7 +164,7 @@ let privates = {
   }
 };
 
-module.exports = {
+let module = {
   translate : (opts) => {
     let q = opts;
     let fields = privates._fields(q.fields);
@@ -201,3 +201,5 @@ module.exports = {
 
   privates : privates //include for unit testing
 };
+
+export {module as Es2Sql};

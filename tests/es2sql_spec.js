@@ -1,5 +1,5 @@
-import * as Es2Sql from '../src/es2sql.js';
-
+import {Es2Sql} from '../src/es2sql.js';
+console.log(Es2Sql);
 let Lib = Es2Sql.privates;
 
 describe('Test es2Sql module load', () => {
