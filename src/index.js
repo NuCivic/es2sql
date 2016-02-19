@@ -1,2 +1,2 @@
-import * as Es2sql from './es2sql.js';
-export default Es2sql;
+import translate from './es2sql.js';
+export * from './es2sql.js';

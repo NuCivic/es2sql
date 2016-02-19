@@ -202,4 +202,4 @@ let module = {
   privates : privates //include for unit testing
 };
 
-export {module as Es2Sql};
+export default module;
