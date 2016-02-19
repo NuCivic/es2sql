@@ -1,6 +1,6 @@
 {
   "name": "es2sql",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --config webpack.config.js",
