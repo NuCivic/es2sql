@@ -52,6 +52,8 @@ module.exports = {
   ],
   output: {
     path: __dirname,
+    library: 'es2sql',
+    libraryTarget: 'uml',
     filename: 'bundle.js',
     publicPath: '/static/'
   },
