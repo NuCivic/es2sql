@@ -1,4 +1,4 @@
-import {Es2Sql} from '../src/es2sql.js';
+import * as Es2Sql from '../src/es2sql.js';
 console.log(Es2Sql);
 let Lib = Es2Sql.privates;
 
@@ -107,7 +107,7 @@ describe('Test translate function - simple', () => {
   it('Should return a sane query string', () => {
     let data = {table: 'rows', fields : ['foo', 'bar'], from: 100, size: 100};
     let val = Es2Sql.translate(data);
-    expect(val).toBe('SELECT foo , bar FROM rows LIMIT = 100 OFFSET = 100');
+    expect(val).toBe('SELECT foo , bar FROM rows LIMIT 100 OFFSET 100');
   });
 
   it('Should return a sane query string with WHERE statement', () => {
@@ -122,6 +122,6 @@ describe('Test translate function - simple', () => {
         ]
       };
     let val = Es2Sql.translate(data);
-    expect(val).toBe('SELECT * FROM rows WHERE foo = bar AND baz >= 123 LIMIT = 100 OFFSET = 100');
+    expect(val).toBe('SELECT * FROM rows WHERE foo = bar AND baz >= 123 LIMIT 100 OFFSET 100');
   });
 });

@@ -188,12 +188,12 @@ let module = {
     }
 
     if (q.size) {    
-      cartoQ.push('LIMIT =');
+      cartoQ.push('LIMIT');
       cartoQ.push(q.size);
     }
 
     if (q.from) {
-      cartoQ.push('OFFSET =');
+      cartoQ.push('OFFSET');
       cartoQ.push(q.from);
     }
     return privates._composeQuery(cartoQ);
