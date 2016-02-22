@@ -64,7 +64,7 @@ let privates = {
   _addTermFilter: (opts) => {
     let sql = '';
     _.each(opts, (key, val) => {
-       sql += val + ' = ' + key;
+       sql += val + ' = ' + '"' + key + '"';
     });
     return sql;     
   },
@@ -179,7 +179,7 @@ let module = {
     cartoQ.push('FROM');
     cartoQ.push(tableName);
 
-    if (q.filters) {
+    if (q.filters && q.filters.length > 0) {
       cartoQ.push(filters);
     }
 
