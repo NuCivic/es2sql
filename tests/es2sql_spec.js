@@ -99,7 +99,7 @@ describe('Test _filters method - single term filter', () => {
   let data = {term : {foo : 'bar'}};
   let val = Lib._filters(data);
   it('Should say WHERE foo = bar', () => {
-    expect(val).toEqual('WHERE foo = "bar"');
+    expect(val).toEqual("WHERE foo = 'bar'");
   });
 });
 
@@ -122,6 +122,6 @@ describe('Test translate function - simple', () => {
         ]
       };
     let val = Es2Sql.translate(data);
-    expect(val).toBe('SELECT * FROM rows WHERE foo = "bar" AND baz >= 123 LIMIT 100 OFFSET 100');
+    expect(val).toBe("SELECT * FROM rows WHERE foo = 'bar' AND baz >= 123 LIMIT 100 OFFSET 100");
   });
 });
