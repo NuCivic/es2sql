@@ -4,7 +4,7 @@ var path = require('path');
 
 module.exports = {
   entry: [
-    './src/index.js'
+    './src/es2sql.js'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
