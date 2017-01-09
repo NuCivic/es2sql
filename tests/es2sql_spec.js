@@ -38,7 +38,7 @@ describe('Test _addTermFilter Method', () => {
   let val2 = Lib._addTermFilter(data2);
 
   it('Should say foo = bar', () => {
-    expect(val).toEqual('foo = bar');
+    expect(val).toEqual("foo = 'bar'");
   });
 });
 

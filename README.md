@@ -3,7 +3,7 @@ Javascript library to translate elastic search queries to sql
 
 # Usage
 ```javascript
-import * as Es2sql from 'src/modules/es2sql.js';
+import { Es2sql } from 'src/modules/es2sql.js';
 
 const esQuery = {
   filters: {...},
